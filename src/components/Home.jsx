@@ -1,9 +1,10 @@
 import React from "react";
 
-const Home = () => {
+const Home = ({ user }) => {
   return (
     <div>
-      <div>Home Page!!</div>
+      <h1>Welcome {user.name}!</h1>
+      <div>Email: {user.email}</div>
     </div>
   );
 };

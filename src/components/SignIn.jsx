@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import "./SignIn.css";
 
-const SignIn = ({ setIsLoggedIn }) => {
+const SignIn = ({ setIsLoggedIn, loadUser, setGetId }) => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+  const [errorMessage, setErrorMessage] = useState("");
 
   const onInputEmailChange = (e) => {
     setEmail(e.target.value);
@@ -10,6 +12,10 @@ const SignIn = ({ setIsLoggedIn }) => {
 
   const onInputPasswordChange = (e) => {
     setPassword(e.target.value);
+  };
+
+  const resetErrorMessage = () => {
+    setErrorMessage("");
   };
 
   const sendSignInData = () => {
@@ -22,13 +28,17 @@ const SignIn = ({ setIsLoggedIn }) => {
       }),
     })
       .then((res) => res.json())
-      .then((data) => {
-        if (data === "success") {
+      .then((user) => {
+        if (user.id) {
+          setGetId(user._id);
+          loadUser(user);
           setIsLoggedIn(true);
         } else {
-          alert("incorrect email or password");
+          setErrorMessage("Incorrect Email or Password. Please Try Again");
+          setTimeout(resetErrorMessage, 3300);
         }
-      });
+      })
+      .catch((error) => console.log(error));
   };
 
   return (
@@ -41,6 +51,7 @@ const SignIn = ({ setIsLoggedIn }) => {
         placeholder="Password"
       />
       <button onClick={sendSignInData}>Submit</button>
+      <div className="error-message">{errorMessage}</div>
     </div>
   );
 };

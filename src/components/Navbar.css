@@ -8,3 +8,31 @@
   max-height: 90px;
   max-width: 100px;
 }
+
+.link {
+  text-decoration: none;
+  color: black;
+  font-weight: normal;
+}
+
+.cart-amount {
+  font-size: 25px;
+  background-color: red;
+  height: 30px;
+  width: 28px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.cart-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.logo-img-2 {
+  height: 50px;
+}
