@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import "./SignUp.css";
 
-const SignUp = ({ setIsLoggedIn, loadUser, setGetId }) => {
+const SignUp = ({ setIsLoggedIn, loadUser, setGetId, preventRefresh }) => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
@@ -69,17 +68,58 @@ const SignUp = ({ setIsLoggedIn, loadUser, setGetId }) => {
 
   return (
     <div>
-      <h1>Register</h1>
-      <input onChange={onInputNameChange} type="text" placeholder="Name" />
-      <input onChange={onInputEmailChange} type="email" placeholder="Email" />
-      <input
+      <div class="form-box register">
+        <h2>Registration</h2>
+        <form onSubmit={preventRefresh}>
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="person"></ion-icon>
+            </span>
+            <input
+              className="input-color"
+              onChange={onInputNameChange}
+              type="text"
+            />
+            <label>Name</label>
+          </div>
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="mail"></ion-icon>
+            </span>
+            <input
+              className="input-color"
+              onChange={onInputEmailChange}
+              type="email"
+            />
+            <label>Email</label>
+          </div>
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="lock-closed"></ion-icon>
+            </span>
+            <input
+              className="input-color"
+              onChange={onInputPasswordChange}
+              type="password"
+            />
+            <label>Password</label>
+          </div>
+          <button className="btn" onClick={sendSignUpData}>
+            Submit
+          </button>
+          <div className="error-message">{emailErrorMessage}</div>
+          <div className="error-message">{passwordErrorMessage}</div>
+        </form>
+      </div>
+      {/* <h1>Register</h1> */}
+      {/* <input onChange={onInputNameChange} type="text" placeholder="Name" /> */}
+      {/* <input onChange={onInputEmailChange} type="email" placeholder="Email" /> */}
+      {/* <input
         onChange={onInputPasswordChange}
         type="password"
         placeholder="Password"
-      />
-      <button onClick={sendSignUpData}>Submit</button>
-      <div className="error-message">{emailErrorMessage}</div>
-      <div className="error-message">{passwordErrorMessage}</div>
+      /> */}
+      {/* <button onClick={sendSignUpData}>Submit</button> */}
     </div>
   );
 };

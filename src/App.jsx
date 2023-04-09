@@ -1,13 +1,12 @@
 import { useState, useEffect } from "react";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home from "./components/Home";
-import About from "./components/About";
-import Discover from "./components/Discover";
-import Flights from "./components/Flights";
-import SignIn from "./components/SignIn";
-import SignUp from "./components/SignUp";
-import Cart from "./components/Cart";
+import Home from "./components/Home/Home";
+import About from "./components/About/About";
+import Discover from "./components/Discover/Discover";
+import Flights from "./components/Flights/Flights";
+import SignIn from "./components/SignInRegister/SignIn";
+import Cart from "./components/Cart/Cart";
 
 function App() {
   const [ticketCount, setTicketCount] = useState(0);
@@ -41,11 +40,6 @@ function App() {
       <Router>
         {isLoggedIn === false ? (
           <>
-            <SignUp
-              setGetId={setGetId}
-              loadUser={loadUser}
-              setIsLoggedIn={setIsLoggedIn}
-            />
             <SignIn
               setGetId={setGetId}
               loadUser={loadUser}

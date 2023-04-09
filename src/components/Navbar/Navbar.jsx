@@ -1,8 +1,8 @@
 import React from "react";
 import "./Navbar.css";
-import navLogo from "../images/my-project.png";
+import navLogo from "../../images/my-project.png";
 import { Link } from "react-router-dom";
-import ShoppingCartIcon from "../images/icons8-shopping-cart-64.png";
+import ShoppingCartIcon from "../../images/icons8-shopping-cart-64.png";
 
 const Navbar = ({ ticketCount, cartCount }) => {
   return (
