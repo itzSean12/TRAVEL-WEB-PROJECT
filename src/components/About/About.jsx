@@ -3,6 +3,7 @@ import blankProfile from "../../images/blank_pfp.jpeg";
 import paolaImg from "../../images/pp_paola.jpg";
 import seanImg from "../../images/download.jpg";
 import michaelImg from "../../images/michael_pfp.png";
+import jobinImg from "../../images/jobin.jpeg";
 
 const About = () => {
   return (
@@ -29,7 +30,7 @@ const About = () => {
           </div>
           <div class="row">
             <div class="col">
-              <img class="pfp-paola" src={blankProfile} />
+              <img class="pfp-paola" src={jobinImg} />
               <h5>Jobin Kurian</h5>
               <h6>Team Lead</h6>
               <h7>
