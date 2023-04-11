@@ -2,6 +2,7 @@ import React from "react";
 import blankProfile from "../../images/blank_pfp.jpeg";
 import paolaImg from "../../images/pp_paola.jpg";
 import seanImg from "../../images/download.jpg";
+import michaelImg from "../../images/michael_pfp.png";
 
 const About = () => {
   return (
@@ -55,7 +56,7 @@ const About = () => {
               </h7>
             </div>
             <div class="col">
-              <img class="pfp-paola" src={blankProfile} />
+              <img class="pfp-paola" src={michaelImg} />
               <h5>Michael Yon</h5>
               <h6>Programmer</h6>
               <h7>
