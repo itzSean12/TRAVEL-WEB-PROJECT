@@ -21,11 +21,11 @@ function WeatherComponent({ city }) {
 
   return (
     <div>
-      <h2>{weatherData.name}</h2>
+      <h2 style={{color:"#4d4747"}}>{weatherData.name}</h2>
       <div>
         <img src={weatherIconUrl} alt="Weather Icon" />
         <h4 class="weather-data">{Math.round(weatherData.main.temp)}°F</h4>
-        <h4 class="weather-data">{weatherData.weather[0].description}</h4>
+        <h5 class="weather-data">{weatherData.weather[0].description}</h5>
         {/* <h4 class="weather-data">{weatherData.main.humidity}% humidity</h4> */}
       </div>
     </div>

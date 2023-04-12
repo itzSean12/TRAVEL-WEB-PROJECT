@@ -122,7 +122,7 @@ const Home = ({ user }) => {
       <div className="panel" style={{width: '15%', paddingTop: '2%', backgroundImage: `url(${panel})` }}>
         <WeatherComponent key={cities[1]} city={cities[1]}/>
       </div>
-      <div className="panel" style={{width: '15%', paddingTop: '2%', backgroundImage: `url(${panel})` }}>
+      <div className="panel" style={{width: '15%',paddingTop: '2%', backgroundImage: `url(${panel})` }}>
         <WeatherComponent key={cities[2]} city={cities[2]}/>
       </div>
       <div className="panel" style={{width: '15%', paddingTop: '2%', backgroundImage: `url(${panel})` }}>
