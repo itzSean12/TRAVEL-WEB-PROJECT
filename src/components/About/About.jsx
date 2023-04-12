@@ -31,7 +31,7 @@ const About = () => {
           </div>
           <div class="row">
             <div class="col">
-              <img class="pfp-paola" src={jobinImg} />
+              <img class="pfp-paola" style={{width:"55%"}} src={jobinImg} />
               <h5>Jobin Kurian</h5>
               <h6>Team Lead</h6>
               <h7>
@@ -40,7 +40,7 @@ const About = () => {
               </h7>
             </div>
             <div class="col">
-              <img class="pfp-paola" src={blankProfile} />
+              <img class="pfp-paola" style={{width:"55%"}}src={marioImg} />
               <h5>Mario Oliva</h5>
               <h6>Programmer</h6>
               <h7>
@@ -58,7 +58,7 @@ const About = () => {
               </h7>
             </div>
             <div class="col">
-              <img class="pfp-paola" src={michaelImg} />
+              <img class="pfp-paola" style={{width:"55%"}} src={michaelImg} />
               <h5>Michael Yon</h5>
               <h6>Programmer</h6>
               <h7>
