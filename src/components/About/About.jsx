@@ -4,6 +4,7 @@ import paolaImg from "../../images/pp_paola.jpg";
 import seanImg from "../../images/download.jpg";
 import michaelImg from "../../images/michael_pfp.png";
 import jobinImg from "../../images/jobin.jpeg";
+import marioImg from "../../images/MarioProfile.png";
 
 const About = () => {
   return (

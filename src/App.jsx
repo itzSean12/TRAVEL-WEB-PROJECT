@@ -11,7 +11,7 @@ import Cart from "./components/Cart/Cart";
 function App() {
   const [ticketCount, setTicketCount] = useState(0);
   const [cartCount, setCartCount] = useState(0);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
   const [getId, setGetId] = useState("");
   const [user, setUser] = useState({
     name: "",

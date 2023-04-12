@@ -7,3 +7,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <App />
   </React.StrictMode>
 );
+
+const link = document.createElement('link');
+link.rel = 'stylesheet';
+link.href = 'https://fonts.googleapis.com/css?family=Alice|Ubuntu';
+document.head.appendChild(link);
