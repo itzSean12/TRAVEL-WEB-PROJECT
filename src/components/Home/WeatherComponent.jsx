@@ -21,7 +21,7 @@ function WeatherComponent({ city }) {
 
   return (
     <div>
-      <h2 style={{color:"#4d4747"}}>{weatherData.name}</h2>
+      <h2 style={{color:"white"}}>{weatherData.name}</h2>
       <div>
         <img src={weatherIconUrl} alt="Weather Icon" />
         <h4 class="weather-data">{Math.round(weatherData.main.temp)}°F</h4>
